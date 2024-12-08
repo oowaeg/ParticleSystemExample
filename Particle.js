@@ -3,7 +3,7 @@
 class Particle {
     constructor(position) {
         this.acceleration = createVector(0, 0);
-        this.velocity = createVector(random(-0.5, 0.5), random(-0.5, 0.5));
+        this.velocity = createVector(random(-0.05, 0.05), random(-0.05, 0.05));
         this.position = position.copy();
         this.lifespan = 255;
         this.size = random(5, 100)
@@ -22,7 +22,6 @@ class Particle {
 
         let randomForce = createVector(random(-0.05, 0.05), random(-0.05, 0.05));
         this.applyForce(randomForce);
-
 
         this.velocity.add(this.acceleration);
         this.position.add(this.velocity);
