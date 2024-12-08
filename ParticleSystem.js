@@ -5,7 +5,9 @@ class ParticleSystem {
     }
 
     addParticle() {
+        if (this.particles.length < 20 && frameCount % 5 === 0) {
         this.particles.push(new Particle(this.origin));
+        }
     }
 
     applyGravity(g) {
