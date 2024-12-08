@@ -5,7 +5,7 @@ class ParticleSystem {
     }
 
     addParticle() {
-        if (this.particles.length < 20 && frameCount % 5 === 0) {
+        if (this.particles.length < 30 && frameCount % 10 === 0) {
         this.particles.push(new Particle(this.origin));
         }
     }

@@ -21,7 +21,7 @@ function draw() {
 }
 
 function mouseClicked() {
-  if (systems.length < 5) {
+  if (systems.length < 10) {
   let mPos = createVector(mouseX, mouseY);
   let system = new ParticleSystem(mPos);
   systems.push(system);
