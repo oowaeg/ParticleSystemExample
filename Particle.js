@@ -20,7 +20,8 @@ class Particle {
 
     update() {
 
-
+        let randomForce = createVector(random(-0.05, 0.05), random(-0.05, 0.05));
+        this.applyForce(randomForce);
 
 
         this.velocity.add(this.acceleration);
