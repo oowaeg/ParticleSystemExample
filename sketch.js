@@ -5,8 +5,8 @@ let wind;
 
 function setup() {
   createCanvas(900, 300);
-  g = createVector(50, 0);
-  wind = createVector(50, 0);
+  g = createVector(0, 0.02);
+  wind = createVector(0.05, 0);
 }
 
 function draw() {
