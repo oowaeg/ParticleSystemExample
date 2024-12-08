@@ -1,12 +1,10 @@
-let system;
-let systems = [];
 
-let g; // gravity
+let systems = [];
+let g; 
 let wind;
 
 function setup() {
-  createCanvas(720, 400);
-  // system = new ParticleSystem(createVector(width / 2, 50));
+  createCanvas(900, 300);
   g = createVector(50, 0);
   wind = createVector(50, 0);
 }
