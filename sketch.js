@@ -5,8 +5,8 @@ let wind;
 
 function setup() {
   createCanvas(900, 300);
-  g = createVector(0, 0.02);
-  wind = createVector(0.05, 0);
+  g = createVector(0, 0.001);
+  wind = createVector(0.02, 0);
 }
 
 function draw() {
@@ -21,7 +21,7 @@ function draw() {
 }
 
 function mouseClicked() {
-  if (systems.length < 10) {
+  if (systems.length < 30) {
   let mPos = createVector(mouseX, mouseY);
   let system = new ParticleSystem(mPos);
   systems.push(system);

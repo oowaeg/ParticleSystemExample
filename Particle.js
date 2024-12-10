@@ -6,7 +6,7 @@ class Particle {
         this.velocity = createVector(random(-0.05, 0.05), random(-0.05, 0.05));
         this.position = position.copy();
         this.lifespan = 255;
-        this.size = random(5, 100)
+        this.size = random(5, 70)
     }
 
     run() {
