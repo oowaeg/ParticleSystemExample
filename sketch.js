@@ -22,8 +22,7 @@ function draw() {
     s.addParticle();
     s.applyGravity(g);
     s.applyForce(wind);
-    s.applyAttraction(attractPoint);
-    s.applyRepulsion();
+    s.applyAttraction(obstacles);
     s.run();
   }
 }
