@@ -27,6 +27,13 @@ function draw() {
   }
 }
 
+noStroke();
+fill(255, 0, 0, 100);
+for (let obstacle of obstacles) {
+  ellipse(obstacle.x, obstacle.y, 20, 20);
+}
+
+
 function mouseClicked() {
   if (systems.length < 30) {
   let mPos = createVector(mouseX, mouseY);
