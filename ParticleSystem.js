@@ -25,9 +25,9 @@ class ParticleSystem {
             for (let obstacle of obstacles) {
                 let direction = obstacle.copy().sub(p.position);
                 let distance = direction.mag();
-                if (distance < 200) {
+                if (distance < 100) {
                     direction.normalize();
-                    let attractionForce = direction.mult(0.05 / (distance + 1));
+                    let attractionForce = direction.mult(1 / (distance + 2));
                     p.applyForce(attractionForce);
                 }
             }
