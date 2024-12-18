@@ -20,10 +20,17 @@ class ParticleSystem {
         }
     }
 
-    applyAttraction(target) {
+    applyObstacleAttraction(obstacles) {
         for (let p of this.particles) {
-            let force = p.position.copy().sub(target).mult(-0.005);
-            p.applyForce(force);
+            for (let obstacle of obstacles) {
+                let direction = obstacle.copy().sub(p.position);
+                let distance = direction.mag();
+                if (distance < 200) {
+                    direction.normalize();
+                    let attractionForce = direction.mult(0.05 / (distance + 1));
+                    p.applyForce(attractionForce);
+                }
+            }
         }
     }
 
