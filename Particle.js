@@ -24,11 +24,6 @@ class Particle {
         this.applyForce(randomForce);
 
         this.velocity.add(this.acceleration);
-
-        let resistance = this.velocity.copy().mult(-0.01); 
-        this.applyForce(resistance);
-
-
         this.position.add(this.velocity);
         this.acceleration.mult(0);
         this.lifespan -= 1;
