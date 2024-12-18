@@ -9,7 +9,7 @@ function setup() {
   g = createVector(0, 0.001);
   wind = createVector(0.02, 0);
   
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 100; i++) {
     let obstacle = createVector(random(width), random(height));
     obstacles.push(obstacle);
   }
