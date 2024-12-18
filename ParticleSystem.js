@@ -20,6 +20,13 @@ class ParticleSystem {
         }
     }
 
+    applyAttraction(target) {
+        for (let p of this.particles) {
+            let force = p.position.copy().sub(target).mult(-0.005);
+            p.applyForce(force);
+        }
+    }
+
     run() {
         for (let i = this.particles.length-1; i >= 0; i--) {
             let p = this.particles[i];
