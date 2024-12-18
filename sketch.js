@@ -9,7 +9,7 @@ function setup() {
   g = createVector(0, 0.001);
   wind = createVector(0.02, 0);
   
-  for (let i = 0; i < 150; i++) {
+  for (let i = 0; i < 100; i++) {
     let obstacle = createVector(random(width), random(height));
     obstacles.push(obstacle);
   }
@@ -17,13 +17,6 @@ function setup() {
 
 function draw() {
   background(51);
-
-
-  noStroke();
-  fill(255, 0, 0, 100);
-  for (let obstacle of obstacles) {
-    ellipse(obstacle.x, obstacle.y, 20, 20);
-  }
 
 
   for (let s of systems) {

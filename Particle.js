@@ -7,6 +7,7 @@ class Particle {
         this.position = position.copy();
         this.lifespan = 255;
         this.size = random(5, 70)
+        this.isPopped = false;
     }
 
     run() {
